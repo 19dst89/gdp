@@ -1,0 +1,23 @@
+h1 {
+  background-color: blue;
+}
+
+div.cities {
+  border: 2px solid blue;
+  padding: 10px;
+}
+
+div.disasters {
+  border: 2px solid red;
+  padding: 10px;
+}
+
+div.display-box {
+  border: 2px solid green;
+  padding: 10px;
+}
+
+main.wrapper {
+  border: 2px solid yellow;
+  height: 500px;
+}

@@ -2,12 +2,12 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var DisasterSchema = new Schema({
-  name: String,
   date: String,
+  name: String,
   deathToll: Number,
   dmgCost: Number,
 });
 
 var Disaster = mongoose.model('Disaster', DisasterSchema);
 
-module.exports = Song;
+module.exports = Disaster;

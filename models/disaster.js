@@ -6,6 +6,8 @@ var DisasterSchema = new Schema({
   name: String,
   deathToll: Number,
   dmgCost: Number,
+  //type:
+  //location:
 });
 
 var Disaster = mongoose.model('Disaster', DisasterSchema);

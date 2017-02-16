@@ -19,7 +19,7 @@ app.get('/', function homepage (req, res){
 });
 
 // JSON API endpoints
-
+app.get('/api/disasters', controllers.disasters.index);
 
 
 //

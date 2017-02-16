@@ -4,20 +4,34 @@ h1 {
 
 div.cities {
   border: 2px solid blue;
-  padding: 10px;
+  padding: 5px;
+  margin: 15px;
+  padding-left: 250px;
 }
 
 div.disasters {
   border: 2px solid red;
-  padding: 10px;
+  padding: 20px;
+  margin: 15px;
+  /*height: 100%;*/
 }
 
 div.display-box {
   border: 2px solid green;
   padding: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  /*margin-left: 50px;*/
 }
 
 main.wrapper {
   border: 2px solid yellow;
-  height: 500px;
+  height: 100%;
+}
+
+div.small-box {
+  border: 2px solid black;
+  padding: 10px;
+  height: 50px;
+  margin: 25px;
 }

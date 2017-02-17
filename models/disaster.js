@@ -4,10 +4,10 @@ var Schema = mongoose.Schema;
 var DisasterSchema = new Schema({
   date: String,
   name: String,
+  location: String,
+  type: String,
   deathToll: Number,
-  dmgCost: Number,
-  //type:
-  location: String
+  dmgCost: Number
 });
 
 var Disaster = mongoose.model('Disaster', DisasterSchema);

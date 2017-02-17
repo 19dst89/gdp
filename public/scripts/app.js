@@ -97,3 +97,25 @@ $(document).ready(function() {
       `)
   });
 }) // end document ready
+
+
+
+
+
+
+
+
+//   $.ajax({
+//     method: "GET",
+//     url: "/api/albums",
+//     success: handleSuccess,
+//     error: handleError
+//   })
+// });
+
+// function handleSuccess(albums) {
+//   // debugger;
+//   albums.forEach(function(album) {
+//   renderAlbum(album);
+// });
+// }

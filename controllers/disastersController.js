@@ -15,6 +15,12 @@ function create(req, res) {
     }
     res.json(newDisaster)
   });
+  db.Disaster.save(function(err, disaster){
+    if (err){
+      console.log(err)
+    }
+    console.log("saved")
+  })
 }
 
 // GET /api/disasters/:id 
@@ -32,6 +38,9 @@ function destroy(req, res) {
 }
 
 // UPDATE /api/disasters/:id
+function update(req, res) {
+  db.Disaster.
+}
 
 // EXPORT methods
 module.exports = {
@@ -39,5 +48,5 @@ module.exports = {
   create: create,
   show: show,
   destroy: destroy,
-  // update: update
+  update: update
 };

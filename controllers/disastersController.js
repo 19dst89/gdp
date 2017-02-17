@@ -24,15 +24,17 @@ function create(req, res) {
 }
 
 // GET /api/disasters/:name
-// function show(req, res) {
-//   db.Disaster.findOne(req.params.name, function(err, oneDisaster){
-//     res.json(oneDisaster);
-//   });
-// }
+function show(req, res) {
+  db.Disaster.findOne({name: req.params.name}, function(err, oneDisaster){
+    if (err) { console.log("get disaster by name error"); }
+    res.json(oneDisaster);
+  });
+}
 
 // REMOVE /api/disasters/:name
 // function destroy(req, res) {
-//   db.Disaster.findByOneAndRemove(req.params.name, function(err, disasterToDelete){
+//   db.Disaster.findOneAndRemove(req.params.name, function(err, disasterToDelete){
+
 //     res.json(disasterToDelete);
 //   });
 // }
@@ -45,8 +47,9 @@ function create(req, res) {
 // EXPORT methods
 module.exports = {
   index: index,
-  create: create
-  // show: show,
-  // destroy: destroy
+  create: create,
+  show: show
+  // destroy: destroy,
+
   // update: update
 };

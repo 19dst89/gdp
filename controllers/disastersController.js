@@ -23,24 +23,24 @@ function create(req, res) {
   })
 }
 
-// GET /api/disasters/:id 
+// GET /api/disasters/:name
 function show(req, res) {
-  db.Disaster.findById(req.params.id, function(err, oneDisaster){
+  db.Disaster.findOne(req.params.name, function(err, oneDisaster){
     res.json(oneDisaster);
   });
 }
 
-// REMOVE /api/disasters/:id
+// REMOVE /api/disasters/:name
 function destroy(req, res) {
-  db.Disaster.findByIdAndRemove(req.params.id, function(err, disasterToDelete){
+  db.Disaster.findByOneAndRemove(req.params.name, function(err, disasterToDelete){
     res.json(disasterToDelete);
   });
 }
 
 // UPDATE /api/disasters/:id
-function update(req, res) {
-  db.Disaster.
-}
+// function update(req, res) {
+//   db.Disaster.
+// }
 
 // EXPORT methods
 module.exports = {
@@ -48,5 +48,5 @@ module.exports = {
   create: create,
   show: show,
   destroy: destroy,
-  update: update
+  // update: update
 };

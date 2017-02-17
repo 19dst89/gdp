@@ -21,8 +21,8 @@ app.get('/', function homepage (req, res){
 // JSON API endpoints
 app.get('/api/disasters', controllers.disasters.index);
 app.get('/api/disasters/', controllers.disasters.create);
-app.get('/api/disasters/:id', controllers.disasters.show);
-app.delete('/api/disasters/:id', controllers.disasters.destroy);
+app.get('/api/disasters/:name', controllers.disasters.show);
+app.delete('/api/disasters/:name', controllers.disasters.destroy);
 
 //
 

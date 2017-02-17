@@ -8,20 +8,20 @@ function index(req, res) {
 };
 
 // POST /api/disasters
-// function create(req, res) {
-//   db.Disaster.create(req.body, function(err, newDisaster){
-//     if (err){
-//       console.log(err)
-//     }
-//     res.json(newDisaster)
-//   });
-//   db.Disaster.save(function(err, disaster){
-//     if (err){
-//       console.log(err)
-//     }
-//     console.log("saved")
-//   })
-// }
+function create(req, res) {
+  db.Disaster.create(req.body, function(err, newDisaster){
+    if (err){
+      console.log(err)
+    }
+    res.json(newDisaster)
+  });
+  db.Disaster.save(function(err, disaster){
+    if (err){
+      console.log(err)
+    }
+    console.log("saved")
+  })
+}
 
 // GET /api/disasters/:name
 // function show(req, res) {
@@ -44,8 +44,8 @@ function index(req, res) {
 
 // EXPORT methods
 module.exports = {
-  index: index
-  // create: create,
+  index: index,
+  create: create
   // show: show,
   // destroy: destroy
   // update: update

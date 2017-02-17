@@ -7,9 +7,8 @@ $(document).ready(function() {
     success: handleSuccess,
     error: handleError
   })
-
-
   function handleSuccess(disasters) {
+    $("div.display-box").empty();
     $("h1").click( function(){
   // debugger;
     disasters.forEach(function(disaster) {
@@ -18,26 +17,45 @@ $(document).ready(function() {
   })
   }
 
-  $.ajax({
+  $(".city-btns").click(function(event){
+    var location = event.target.value;
+
+    $.ajax({
     method: "GET",
-    url: "/api/disasters/San Francisco",
+    url: `/api/disasters/${location}`,
     success: showByLocation,
     error: handleError
-  })
-
-  function showByLocation(disasters){
-    $(".city-btns").click(function(event){
-      console.log(event.target.value)
-      // var locSF = $("#sf-btn").val();
-      // var locSea = $("#seattle-btn").val();
-      // console.log(locSF);
-      // console.log(locSea);
-      // disasters.forEach(function(disaster){
-      //   renderDisaster(disaster);
-      // })
     })
 
-  }
+    function showByLocation(disasters){
+      $("div.display-box").empty();
+      disasters.forEach(function(disaster){
+        renderDisaster(disaster);
+      })
+    }
+  })
+
+
+  // $.ajax({
+  //   method: "GET",
+  //   url: "/api/disasters/San Francisco",
+  //   success: showByLocation,
+  //   error: handleError
+  // })
+
+  // function showByLocation(disasters){
+  //   $(".city-btns").click(function(event){
+  //     console.log(event.target.value)
+  //     // var locSF = $("#sf-btn").val();
+  //     // var locSea = $("#seattle-btn").val();
+  //     // console.log(locSF);
+  //     // console.log(locSea);
+  //     // disasters.forEach(function(disaster){
+  //     //   renderDisaster(disaster);
+  //     // })
+  //   })
+
+  // }
 
   function handleError(err){
     console.log("error", err);
@@ -58,6 +76,9 @@ $(document).ready(function() {
           </li>
           <li>
             Total Est Cost: ${disaster.dmgCost}
+          </li>
+          <li>
+            ${disaster.location}
           </li>
         </ul>
       </div>

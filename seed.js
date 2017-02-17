@@ -57,7 +57,8 @@ var disasterList = [
   }
 ];
 
-db.Disaster.create(disasterList, function(err, disasters){
-  if(err) { return console.log (err); }
-  console.log("created disaster");
+db.Disaster.remove({}, function(err, disasters){
+  db.Disaster.create(disasterList, function(err, disasters){
+    if(err) { return console.log (err); }
+  });
 });

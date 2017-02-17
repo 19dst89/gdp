@@ -17,6 +17,8 @@ function create(req, res) {
   });
 }
 
+// REMOVE /api/disasters/:id
+
 // EXPORT methods
 module.exports = {
   index: index,

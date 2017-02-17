@@ -25,17 +25,18 @@ function create(req, res) {
 
 // GET /api/disasters/:name
 function show(req, res) {
-  db.Disaster.findOne(req.params.name, function(err, oneDisaster){
+  db.Disaster.findOne({name: req.params.name}, function(err, oneDisaster){
+    if (err) { console.log("get disaster by name error"); }
     res.json(oneDisaster);
   });
 }
 
 // REMOVE /api/disasters/:name
-function destroy(req, res) {
-  db.Disaster.findByOneAndRemove(req.params.name, function(err, disasterToDelete){
-    res.json(disasterToDelete);
-  });
-}
+// function destroy(req, res) {
+//   db.Disaster.findOneAndRemove(req.params.name, function(err, disasterToDelete){
+//     res.json(disasterToDelete);
+//   });
+// }
 
 // UPDATE /api/disasters/:id
 // function update(req, res) {
@@ -46,7 +47,7 @@ function destroy(req, res) {
 module.exports = {
   index: index,
   create: create,
-  show: show,
-  destroy: destroy,
+  show: show
+  // destroy: destroy,
   // update: update
 };

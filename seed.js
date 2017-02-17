@@ -45,13 +45,13 @@ var disasterList = [
   },
   {
     date: "August 24, 2014",
-    name: "2014 South Napa earthquake",
+    name: "South",
     deathToll: 1,
     dmgCost: 1000000000
   },
   {
     date: "September 3, 2000",
-    name: "2000 Yountville earthquake",
+    name: "2000",
     deathToll: 0,
     dmgCost: 50000000
   }
@@ -61,6 +61,7 @@ db.Disaster.remove({}, function(err, disasters){
   console.log("removed previous disasters")
   db.Disaster.create(disasterList, function(err, disasters){
     if(err) { return console.log (err); }
+    console.log("created new disasters");
+    process.exit();
   });
-  console.log("created new disasters")
 });

@@ -22,7 +22,7 @@ app.get('/', function homepage (req, res){
 app.get('/api/disasters', controllers.disasters.index);
 app.get('/api/disasters/', controllers.disasters.create);
 app.get('/api/disasters/:name', controllers.disasters.show);
-app.delete('/api/disasters/:name', controllers.disasters.destroy);
+// app.delete('/api/disasters/:name', controllers.disasters.destroy);
 
 //
 

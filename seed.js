@@ -58,7 +58,9 @@ var disasterList = [
 ];
 
 db.Disaster.remove({}, function(err, disasters){
+  console.log("removed previous disasters")
   db.Disaster.create(disasterList, function(err, disasters){
     if(err) { return console.log (err); }
   });
+  console.log("created new disasters")
 });

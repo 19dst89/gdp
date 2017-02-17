@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/gdp");
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/gdp" );
 
 var Disaster = require('./disaster');
 

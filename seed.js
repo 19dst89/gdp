@@ -13,7 +13,7 @@ var disasterList = [
     date: "March 22, 1957",
     name: "1957 San Francisco Earthquake",
     location: "San Francisco",
-    type: "Earthquake"
+    type: "Earthquake",
     deathToll: 1,
     dmgCost: 1000000
   },
@@ -74,6 +74,7 @@ var disasterList = [
     dmgCost: 50000000
   },
   {
+
     date: "October 1, 1969",
     name: "1969 Santa Rosa Earthquakes",
     location: "San Francisco",

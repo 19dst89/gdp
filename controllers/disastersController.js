@@ -34,6 +34,7 @@ function show(req, res) {
 // REMOVE /api/disasters/:name
 // function destroy(req, res) {
 //   db.Disaster.findOneAndRemove(req.params.name, function(err, disasterToDelete){
+
 //     res.json(disasterToDelete);
 //   });
 // }
@@ -49,5 +50,6 @@ module.exports = {
   create: create,
   show: show
   // destroy: destroy,
+
   // update: update
 };

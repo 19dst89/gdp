@@ -6,54 +6,70 @@ var disasterList = [
     name: "1989 Loma Prieta",
     deathToll: 63,
     dmgCost: 6000000000,
+    location: "San Francisco"
   },
   {
     date: "March 22, 1957",
     name: "1957 San Francisco earthquake",
     deathToll: 1,
-    dmgCost: 1000000
+    dmgCost: 1000000,
+    location: "San Francisco"
   },
   {
     date: "October 21, 1868",
     name: "1868 Hayward earthquake",
     deathToll: 30,
-    dmgCost: 350000000
+    dmgCost: 350000000,
+    location: "San Francisco"
   },
   {
     date: "June 1838",
     name: "1838 San Andreas earthquake",
     deathToll: 0,
-    dmgCost: 0
+    dmgCost: 0,
+    location: "San Francisco"
   },
   {
     date: "April 24, 1984",
     name: "1984 Morgan Hill earthquake",
     deathToll: 0,
-    dmgCost: 8000000
+    dmgCost: 8000000,
+    location: "San Francisco"
   },
   {
     date: "August 6, 1979",
     name: "1979 Coyote Lake earthquake",
     deathToll: 0,
-    dmgCost: 500000
+    dmgCost: 500000,
+    location: "San Francisco"
   },
   {
     date: "October 1, 1969",
     name: "1969 Santa Rosa earthquake",
     deathToll: 1,
-    dmgCost: 8350000
+    dmgCost: 8350000,
+    location: "San Francisco"
   },
   {
     date: "August 24, 2014",
     name: "South",
     deathToll: 1,
-    dmgCost: 1000000000
+    dmgCost: 1000000000,
+    location: "San Francisco"
   },
   {
     date: "September 3, 2000",
     name: "2000",
     deathToll: 0,
-    dmgCost: 50000000
+    dmgCost: 50000000,
+    location: "San Francisco"
+  },
+  {
+    date: "TEST DATE",
+    name: "2000",
+    deathToll: 0,
+    dmgCost: 50000000,
+    location: "NOT HERE"
   }
 ];
 

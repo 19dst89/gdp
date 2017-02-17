@@ -23,13 +23,21 @@ function create(req, res) {
   })
 }
 
-// GET /api/disasters/:name
+// GET /api/disasters/:location
 function show(req, res) {
-  db.Disaster.findOne({name: req.params.name}, function(err, oneDisaster){
-    if (err) { console.log("get disaster by name error"); }
-    res.json(oneDisaster);
+  db.Disaster.find({location: req.params.location}, function(err, disasters){
+    if (err) { console.log("get disaster by location error"); }
+    res.json(disasters);
   });
 }
+
+// GET all from one location
+// function showSome(req, res) {
+//   db.Disaster.find({location: req.params.location}, function(err, someDisasters){
+//     if (err) { console.log("get disaster by name error"); }
+//     res.json(someDisasters);
+//   });
+// }
 
 // REMOVE /api/disasters/:name
 // function destroy(req, res) {

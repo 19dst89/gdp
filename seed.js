@@ -63,6 +63,13 @@ var disasterList = [
     deathToll: 0,
     dmgCost: 50000000,
     location: "San Francisco"
+  },
+  {
+    date: "TEST DATE",
+    name: "2000",
+    deathToll: 0,
+    dmgCost: 50000000,
+    location: "NOT HERE"
   }
 ];
 

@@ -44,9 +44,9 @@ function index(req, res) {
 
 // EXPORT methods
 module.exports = {
-  index: index,
-  create: create,
-  show: show,
-  destroy: destroy
+  index: index
+  // create: create,
+  // show: show,
+  // destroy: destroy
   // update: update
 };

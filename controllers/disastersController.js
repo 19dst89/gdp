@@ -17,10 +17,27 @@ function create(req, res) {
   });
 }
 
+// GET /api/disasters/:id 
+function show(req, res) {
+  db.Disaster.findById(req.params.id, function(err, oneDisaster){
+    res.json(oneDisaster);
+  });
+}
+
 // REMOVE /api/disasters/:id
+function destroy(req, res) {
+  db.Disaster.findByIdAndRemove(req.params.id, function(err, disasterToDelete){
+    res.json(disasterToDelete);
+  });
+}
+
+// UPDATE /api/disasters/:id
 
 // EXPORT methods
 module.exports = {
   index: index,
-  create: create
+  create: create,
+  show: show,
+  destroy: destroy,
+  // update: update
 };

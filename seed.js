@@ -74,7 +74,6 @@ var disasterList = [
     dmgCost: 50000000
   },
   {
-
     date: "October 1, 1969",
     name: "1969 Santa Rosa Earthquakes",
     location: "San Francisco",

@@ -80,6 +80,22 @@ var disasterList = [
     type: "Earthquake",
     deathToll: 1,
     dmgCost: 870000000
+  },
+  {
+    date: "October 1, 1969",
+    name: "Seattle TEST",
+    location: "Seattle",
+    type: "Earthquake",
+    deathToll: 1,
+    dmgCost: 870000000
+  },
+  {
+    date: "October 1, 1969",
+    name: "New York Test",
+    location: "New York",
+    type: "Earthquake",
+    deathToll: 1,
+    dmgCost: 870000000
   }
 ];
 

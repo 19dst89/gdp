@@ -21,7 +21,7 @@
     <div class="cities">
       <h3>City Buttons</h3>
       <button name="location" value="San Francisco" class="city-btns btn btn-lg" id="sf-btn">San Francisco</button>
-      <button value="Seattle" id="seattle-btn" class="city-btns btn btn-lg">Seatle</button>
+      <button value="Seattle" id="seattle-btn" class="city-btns btn btn-lg">Seattle</button>
       <button value="New York" class="city-btns btn btn-lg">New York</button>
       <button class="city-btns btn btn-lg">Los Angeles</button>
       <button class="city-btns btn btn-lg">Miami</button>
@@ -39,19 +39,19 @@
     <div class="display-box col-md-8 col-md-offset-1">
     </div>
     <div class="new-input-form">
-      <form action="/new-disaster" method="POST">
-        <div class="disaster-form col-md-2">
+      <form action="api/disasters" method="POST">
+        <div class="disaster-form col-md-3">
           <label>Disaster:</label>
-          <select class="form-control">
+          <select name="type" class="form-control">
             <option>Earthquake</option>
             <option>Hurricane</option>
             <option>Tornado</option>
             <option>Flood</option>
           </select>
         </div>
-        <div class="location-form col-md-2">
+        <div class="location-form col-md-3">
           <label>Location:</label>
-          <select class="form-control">
+          <select name="location" class="form-control">
             <option>San Francisco</option>
             <option>Seattle</option>
             <option>New York</option>
@@ -60,6 +60,21 @@
             <option>Oklahoma City</option>
             <option>Toronto</option>
           </select>
+        </div>
+        <div class="date-form col-md-3">
+          <label>Date:</label>
+          <input class="form-control" type="text" name="date" placeholder="January 1, 1970">
+        </div>
+        <div class="deaths-form col-md-3">
+          <label>Death Toll:</label>
+          <input class="form-control" type="number" name="deathToll" min="0" max="1000000000">
+        </div>
+        <div class="dmg-form col-md-3">
+          <label>Damage Cost:</label>
+          <input class="form-control" type="number" name="dmgCost" min="0" max="1000000000000">
+        </div>
+        <div class="submit-new-disaster col-md-3">
+          <input class="form-control" type="submit" value="Add New Disaster">
         </div>
       </form>
     </div>

@@ -15,12 +15,12 @@ function create(req, res) {
     }
     res.json(newDisaster)
   });
-  db.Disaster.save(function(err, disaster){
-    if (err){
-      console.log(err)
-    }
-    console.log("saved")
-  })
+  // db.Disaster.save(function(err, disaster){
+  //   if (err){
+  //     console.log(err)
+  //   }
+  //   console.log("saved")
+  // })
 }
 
 // GET /api/disasters/:location

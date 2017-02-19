@@ -35,6 +35,17 @@ $(document).ready(function() {
     }
   })
 
+  //create new disaster
+  // $.ajax({
+  //   method: "POST",
+  //   url: `/api/disasters`
+  //   success: newDisaster,
+  //   error: handleError
+  // })
+  // function newDisaster(req, res){
+  //   console.log(req.body)
+  // }
+
 
   // $.ajax({
   //   method: "GET",

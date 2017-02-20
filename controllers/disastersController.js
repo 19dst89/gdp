@@ -15,12 +15,6 @@ function create(req, res) {
     }
     res.json(newDisaster)
   });
-  // db.Disaster.save(function(err, disaster){
-  //   if (err){
-  //     console.log(err)
-  //   }
-  //   console.log("saved")
-  // })
 }
 
 // GET /api/disasters/:location
@@ -31,13 +25,6 @@ function show(req, res) {
   });
 }
 
-// GET all from one location
-// function showSome(req, res) {
-//   db.Disaster.find({location: req.params.location}, function(err, someDisasters){
-//     if (err) { console.log("get disaster by name error"); }
-//     res.json(someDisasters);
-//   });
-// }
 
 // REMOVE /api/disasters/:name
 // function destroy(req, res) {

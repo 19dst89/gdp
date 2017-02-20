@@ -1,6 +1,7 @@
 $(document).ready(function() {
   console.log("JS Loaded");
 
+  // Show all disasters
   $.ajax({
     method: "GET",
     url: "/api/disasters",
@@ -10,13 +11,13 @@ $(document).ready(function() {
   function handleSuccess(disasters) {
     $("div.display-box").empty();
     $("h1").click( function(){
-  // debugger;
     disasters.forEach(function(disaster) {
     renderDisaster(disaster);
     });
   })
   }
 
+  // Show disasters by location
   $(".city-btns").click(function(event){
     var location = event.target.value;
 
@@ -47,31 +48,11 @@ $(document).ready(function() {
   // }
 
 
-  // $.ajax({
-  //   method: "GET",
-  //   url: "/api/disasters/San Francisco",
-  //   success: showByLocation,
-  //   error: handleError
-  // })
-
-  // function showByLocation(disasters){
-  //   $(".city-btns").click(function(event){
-  //     console.log(event.target.value)
-  //     // var locSF = $("#sf-btn").val();
-  //     // var locSea = $("#seattle-btn").val();
-  //     // console.log(locSF);
-  //     // console.log(locSea);
-  //     // disasters.forEach(function(disaster){
-  //     //   renderDisaster(disaster);
-  //     // })
-  //   })
-
-  // }
-
   function handleError(err){
     console.log("error", err);
   }
 
+  // Render disasters on HTML
   function renderDisaster(disaster){
     $("div.display-box").append(`
       <div class="small-box col-md-3">

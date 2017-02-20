@@ -59,6 +59,14 @@ function update(req, res) {
   });
 }
 
+// Find disasters by location and type
+function showByTypeAndLocation(req, res){
+  db.Disaster.find({location: req.params.location, type: req.params.type}, function(err, disasters){
+    if (err) { console.log("get disaster by type error"); }
+    res.json(disasters);
+  });
+}
+
 // EXPORT methods
 module.exports = {
   index: index,
@@ -67,4 +75,12 @@ module.exports = {
   destroy: destroy,
   update: update,
   showByName: showByName,
+  showByTypeAndLocation: showByTypeAndLocation
 };
+
+
+
+
+
+
+

@@ -23,7 +23,7 @@ app.get('/api/disasters', controllers.disasters.index);
 app.post('/api/disasters', controllers.disasters.create);
 // app.get('/api/disasters/:name', controllers.disasters.show);
 app.get('/api/disasters/:location', controllers.disasters.show);
-// app.delete('/api/disasters/:name', controllers.disasters.destroy);
+app.delete('/api/disasters/:name', controllers.disasters.destroy);
 
 //
 

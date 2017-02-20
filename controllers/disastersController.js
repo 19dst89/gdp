@@ -40,12 +40,12 @@ function show(req, res) {
 // }
 
 // REMOVE /api/disasters/:name
-// function destroy(req, res) {
-//   db.Disaster.findOneAndRemove(req.params.name, function(err, disasterToDelete){
-
-//     res.json(disasterToDelete);
-//   });
-// }
+function destroy(req, res) {
+  db.Disaster.findOneAndRemove({name: req.params.name}, function(err, disasterToDelete){
+    if (err) { console.log("get disaster by location error"); }
+    res.json(disasterToDelete);
+  });
+}
 
 // UPDATE /api/disasters/:id
 // function update(req, res) {
@@ -56,8 +56,8 @@ function show(req, res) {
 module.exports = {
   index: index,
   create: create,
-  show: show
-  // destroy: destroy,
+  show: show,
+  destroy: destroy
 
   // update: update
 };

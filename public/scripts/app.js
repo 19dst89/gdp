@@ -36,6 +36,26 @@ $(document).ready(function() {
     }
   })
 
+  // Show disasters byt type and location
+  $(".type-btns").click(function(event){
+    var type = event.target.value;
+    var location = "New York";
+
+    $.ajax({
+    method: "GET",
+    url: `/api/disasters/${location}/${type}`,
+    success: showByType,
+    error: handleError
+    })
+
+    function showByType(disasters){
+      $("div.display-box").empty();
+      disasters.forEach(function(disaster){
+        renderDisaster(disaster);
+      })
+    }
+  })
+
   //create new disaster
   // $.ajax({
   //   method: "POST",

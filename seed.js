@@ -96,6 +96,22 @@ var disasterList = [
     type: "Earthquake",
     deathToll: 1,
     dmgCost: 870000000
+  },
+  {
+    date: "Test DAte",
+    name: "New York Test",
+    location: "New York",
+    type: "Flood",
+    deathToll: 1,
+    dmgCost: 2
+  },
+  {
+    date: "Test DAte2",
+    name: "New York Test2",
+    location: "New York",
+    type: "Flood",
+    deathToll: 2,
+    dmgCost: 3
   }
 ];
 

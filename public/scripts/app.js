@@ -57,7 +57,7 @@ $(document).ready(function() {
   })
 
   //create new disaster
-  $("form").submit(function(event){
+  $("form#new-form").submit(function(event){
       event.preventDefault();
     $.ajax({
       method: "POST",
@@ -113,9 +113,35 @@ $(document).ready(function() {
     `)
   }
 
+  $("div.update-form").hide();
+  $("div.display-box").click(function(event){
+    $("div.new-input-form").hide();
+    $("div.update-form").show();
+    var editText = $(event.target).text();
+    var date = editText.split("            ")[1];
+    var name = editText.split("            ")[2];
+    var deathToll = editText.split("            ")[3].split(": ")[1];
+    var dmgCost = editText.split("            ")[4].split(": ")[1];
+    var location = editText.split("            ")[5];
+
+    console.log(dmgCost);
+
+    //get form field values
+    var dateField = document.getElementById('editDate');
+      dateField.value = date;
+    var nameField = document.getElementById('editName');
+      nameField.value = name;
+    var deathField = document.getElementById('editDeaths');
+      deathField.value = parseInt(deathToll);
+    var dmgField = document.getElementById('editDmg');
+      dmgField.value = parseInt(dmgCost);
+    var locationField = document.getElementById('editLocation');
+      locationField.value = location;
+  })
+
+
 
 }) // end document ready
-
 
 
 

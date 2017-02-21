@@ -25,12 +25,6 @@ function create(req, res) {
     console.log("saved", disaster);
     res.json(disaster);
   })
-  // db.Disaster.create(req.body, function(err, newDisaster){
-  //   if (err){
-  //     console.log(err)
-  //   }
-  //   res.json(newDisaster);
-  // });
 }
 
 // GET /api/disasters/:location
@@ -42,9 +36,9 @@ function show(req, res) {
 }
 
 
-// REMOVE /api/disasters/:name
+// REMOVE /api/disasters/:id
 function destroy(req, res) {
-  db.Disaster.findOneAndRemove({name: req.params.name}, function(err, disasterToDelete){
+  db.Disaster.findOneAndRemove({id: req.params._id}, function(err, disasterToDelete){
     if (err) { console.log("get disaster by location error"); }
     res.json(disasterToDelete);
   });
@@ -58,11 +52,10 @@ function showByName(req, res) {
   });
 }
 
-// UPDATE /api/disasters/:name
+// UPDATE /api/disasters/:id
 function update(req, res) {
-  db.Disaster.findById(req.params._id, function(err, foundDisaster) {
+  db.Disaster.findById(req.params.id, function(err, foundDisaster) {
     if(err) { console.log('disastersController.update error', err); }
-    console.log(foundDisaster);
     foundDisaster.date = req.body.date;
     foundDisaster.name = req.body.name;
     foundDisaster.location = req.body.location;

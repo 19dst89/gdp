@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("JS Loaded");
 
   // Show all disasters
   $.ajax({
@@ -70,7 +69,6 @@ $(document).ready(function() {
     })
     function newDisaster(disaster){
       renderDisaster(disaster);
-      // console.log(disaster.type);
     }
   })
 
@@ -116,25 +114,13 @@ $(document).ready(function() {
     `)
   }
 
-  function changeDisaster(disaster){
-    renderDisaster(disaster);
-    // $("form#update-form").attr("action", `/api/disasters/${locationField.value}`);
-    // console.log(disaster.type);
-  };
-
   $("div.update-form").hide();
   $("div.display-box").on("click", ".small-disaster-box", function(event){
       $("div.new-input-form").hide();
       $("div.update-form").show();
-      // var editText = $(event.target).text();
-      // var date = editText.split("            ")[1];
-      // var name = editText.split("            ")[2];
-      // var deathToll = editText.split("            ")[3].split(": ")[1];
-      // var dmgCost = editText.split("            ")[4].split(": ")[1];
-      // var location = editText.split("            ")[5];
-      // var typeValue = editText.split("            ")[];
+
       var id = $(this).find('.disaster-id-input').val();
-      console.log($(document).data(id).date);
+
       var put_data = {
         date: $(document).data(id).date,
         name: $(document).data(id).name,
@@ -159,34 +145,21 @@ $(document).ready(function() {
 
       $("form#change-form").submit(function(event){
         event.preventDefault();
-        console.log(this);
         $(this).attr("action", `/api/disasters/${put_data._id}`);
-        $(this).attr("method", "PUT");
+
         $.ajax({
           method: "PUT",
           url: `/api/disasters/${put_data._id}`,
-          data: put_data,
+          data: $(this).serialize(),
           success: changeDisaster,
           error: handleError
         });
       })
   });
 
-  // $("form#update-form").submit(function(event){
-  //     event.preventDefault();
-  //   $.ajax({
-  //     method: "PUT",
-  //     url: `/api/disasters`,
-  //     data: $(this).serialize(),
-  //     success: newDisaster,
-  //     error: handleError
-  //   })
-  //   function newDisaster(disaster){
-  //     renderDisaster(disaster);
-  //     // console.log(disaster.type);
-  //   }
-  // })
-
+  function changeDisaster(disaster){
+    renderDisaster(disaster);
+  };
 
 
 }) // end document ready

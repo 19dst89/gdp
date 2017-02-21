@@ -12,18 +12,19 @@ This is a web app to document natural disasters in select cities. Users can add,
 7. Toronto
 
 The natural disasters that can be documented are:
-  *Earthquakes
-  *Hurricanes
-  *Tornadoes
-  *Floods
+* Earthquakes
+* Hurricanes
+* Tornadoes
+* Floods
 
 ## Technologies Used
-*MongoDB
-*Express
-*Node.js
-*CSS
-*HTML
+* MongoDB
+* Express
+* Node.js
+* CSS
+* HTML
 
-### Built By
+### Built By:
 [Daniel Thompson](https://github.com/19dst89/)
+
 [Kevin Kuo](https://github.com/kkuo57)

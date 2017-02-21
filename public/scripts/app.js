@@ -10,7 +10,7 @@ $(document).ready(function() {
   })
   function handleSuccess(disasters) {
     $("div.display-box").empty();
-    $("h1").click( function(){
+    $("#showAll").click( function(){
     disasters.forEach(function(disaster) {
     renderDisaster(disaster);
     });
@@ -74,8 +74,19 @@ $(document).ready(function() {
 
   // Render disasters on HTML
   function renderDisaster(disaster){
+    var bkColor = ""
+    if (disaster.type === "Flood") {
+      bkColor = "lightblue";
+    } else if (disaster.type === "Earthquake") {
+      bkColor = "darkgoldenrod";
+    } else if (disaster.type === "Hurricane") {
+      bkColor = "royalblue";
+    } else if (disaster.type === "Tornado") {
+      bkColor = "rgb(128, 128, 128)";
+    }
+
     $("div.display-box").append(`
-      <div class="small-box col-md-3">
+      <div class="small-box col-md-3" style="background-color:${bkColor}">
         <ul>
           <li>
             ${disaster.date}

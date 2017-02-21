@@ -1,44 +1,96 @@
 h1 {
-  background-color: blue;
+  /*background-color: blue;*/
+  text-align: center;
 }
 
 div.cities {
-  border: 2px solid blue;
+  /*border: 2px solid blue;*/
   padding: 5px;
-  margin: 15px;
-  padding-left: 250px;
+  background-color: lightblue;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+h3#city-head {
+  margin-right: 10px;
 }
 
 div.disasters {
-  border: 2px solid red;
+  /*border: 2px solid red;*/
+  background-color: rgb(153, 0, 0);
+  border-radius: 30px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  height: 100%;
+}
+
+button.type-btns {
   padding: 10px;
-  margin: 15px;
-  /*height: 100%;*/
+  width: 150px;
 }
 
 div.display-box {
-  border: 2px solid green;
+  /*border: 2px solid green;*/
   padding: 10px;
-  margin-top: 10px;
-  margin-right: 5px;
+  margin-top: -280px;
+  /*margin-right: 5px;*/
   height: 100%;
   /*margin-left: 50px;*/
 }
 
 main.wrapper {
-  border: 2px solid yellow;
+  /*border: 2px solid yellow;*/
   height: 100%;
 }
 
 div.small-box {
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   padding: 20px;
   padding-right: 30px;
   height: 200px;
   width: 200px;
   margin: 10px;
+  border-radius: 30px;
 }
 
 ul {
     text-decoration: none;
 }
+
+.new-input-form {
+  margin-top: 20px;
+  /*border: 2px solid red;*/
+  padding: 20px;
+  border-radius: 30px;
+  background-color: rgb(92, 214, 92);
+}
+
+#showAll {
+  /*border: 2px solid green;*/
+  padding: 10px;
+  /*margin-top: 50px;*/
+/*  height: 100px;
+  width: 100px;*/
+}
+
+button#quake {
+  background-color: darkgoldenrod;
+}
+
+button#tornado {
+  background-color: rgb(128, 128, 128);
+}
+
+button#flood {
+  background-color: lightblue;
+}
+
+button#hurricane {
+  background-color: royalblue;
+}
+
+
+
+
+

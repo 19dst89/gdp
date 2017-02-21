@@ -49,7 +49,7 @@
   </main>
     <div class="new-input-form col-md-10 col-md-offset-1">
       <h4 class="col-md-3">Add New Disaster Form</h4>
-      <form action="api/disasters" method="POST">
+      <form id="new-form" action="api/disasters" method="POST">
         <div class="disaster-form col-md-3">
           <label>Disaster:</label>
           <select name="type" class="form-control">
@@ -71,6 +71,10 @@
             <option>Toronto</option>
           </select>
         </div>
+        <div class="name-form col-md-3">
+          <label>Name of Disaster:</label>
+          <input class="form-control" type="text" name="name" placeholder="1989 SF Earthquake">
+        </div>
         <div class="date-form col-md-3">
           <label>Date:</label>
           <input class="form-control" type="text" name="date" placeholder="January 1, 1970">
@@ -86,6 +90,53 @@
         <div class="submit-new-disaster col-md-3">
         <label></label>
           <input class="form-control" type="submit" value="Add New Disaster">
+        </div>
+      </form>
+    </div>
+
+    <div class="update-form col-md-10 col-md-offset-1">
+      <h4 class="col-md-3">Edit Existing Disaster</h4>
+      <form id="change-form" action="#" method="#">
+        <div class="disaster-form col-md-3">
+          <label>Disaster:</label>
+          <select name="type" class="form-control" id="editType">
+            <option>Earthquake</option>
+            <option>Hurricane</option>
+            <option>Tornado</option>
+            <option>Flood</option>
+          </select>
+        </div>
+        <div class="update-location-form col-md-3">
+          <label>Location:</label>
+          <select name="location" class="form-control" id="editLocation">
+            <option>San Francisco</option>
+            <option>Seattle</option>
+            <option>New York</option>
+            <option>Los Angeles</option>
+            <option>Miami</option>
+            <option>Oklahoma City</option>
+            <option>Toronto</option>
+          </select>
+        </div>
+        <div class="update-name-form col-md-3">
+          <label>Name of Disaster:</label>
+          <input class="form-control" type="text" name="name" id="editName" placeholder="1989 SF Earthquake">
+        </div>
+        <div class="update-date-form col-md-3">
+          <label>Date:</label>
+          <input class="form-control" type="text" name="date" id="editDate" placeholder="January 1, 1970">
+        </div>
+        <div class="update-deaths-form col-md-3">
+          <label>Death Toll:</label>
+          <input class="form-control" type="number" name="deathToll" id="editDeaths" min="0" max="1000000000">
+        </div>
+        <div class="update-dmg-form col-md-3">
+          <label>Damage Cost:</label>
+          <input class="form-control" type="number" name="dmgCost" id="editDmg" min="0" max="1000000000000">
+        </div>
+        <div class="update-submit-new-disaster col-md-3">
+        <label></label>
+          <input class="form-control" type="submit" value="Edit Disaster">
         </div>
       </form>
     </div>

@@ -24,7 +24,7 @@ app.post('/api/disasters', controllers.disasters.create);
 app.get('/api/disasters/:location', controllers.disasters.show);
 app.get('/api/disasters/:location/:type', controllers.disasters.showByTypeAndLocation);
 app.delete('/api/disasters/:name', controllers.disasters.destroy);
-app.put('/api/disasters/:name', controllers.disasters.update);
+app.put('/api/disasters/:id', controllers.disasters.update);
 app.get('/api/disasters/:name', controllers.disasters.showByName);
 
 //

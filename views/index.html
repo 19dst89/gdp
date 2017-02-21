@@ -18,27 +18,37 @@
   <h1>Ghosts of Disasters Past</h1>
 
   <main class="wrapper col-md-10 col-md-offset-1">
-    <div class="cities">
-      <h3>City Buttons</h3>
-      <button name="location" value="San Francisco" class="city-btns btn btn-lg" id="sf-btn">San Francisco</button>
-      <button value="Seattle" id="seattle-btn" class="city-btns btn btn-lg">Seattle</button>
-      <button value="New York" class="city-btns btn btn-lg">New York</button>
-      <button value="Los Angeles" class="city-btns btn btn-lg">Los Angeles</button>
-      <button value="Miami" class="city-btns btn btn-lg">Miami</button>
-      <button value="Oklahoma City" class="city-btns btn btn-lg">Oklahoma City</button>
-      <button value="Toronto" class="city-btns btn btn-lg">Toronto</button>
+    <div class="cities col-md-12">
+<!--   <div class="col-md-2" id="showAll">
+  <button class="btn btn-lg">Show All</button>
+
+  </div> -->
+      <!-- <h3>City Buttons</h3> -->
+      <button class="col-md-2 btn btn-lg" id="showAll">Show All</button>
+      <div class="col-md-10">
+        <h3 class="col-md-1" id="city-head">Cities</h3>
+        <button name="location" value="San Francisco" class="city-btns btn btn-lg" id="sf-btn">San Francisco</button>
+        <button value="Seattle" id="seattle-btn" class="city-btns btn btn-lg">Seattle</button>
+        <button value="New York" class="city-btns btn btn-lg">New York</button>
+        <button value="Los Angeles" class="city-btns btn btn-lg">Los Angeles</button>
+        <button value="Miami" class="city-btns btn btn-lg">Miami</button>
+        <button value="Oklahoma City" class="city-btns btn btn-lg">Oklahoma City</button>
+        <button value="Toronto" class="city-btns btn btn-lg">Toronto</button>
+      </div>
     </div>
     <div class="disasters col-md-2">
-      <h3>Disaster Buttons</h3>
-      <button value="Earthquake" class="type-btns btn btn-lg">Earthquakes</button>
-      <button value="Tornado" class="type-btns btn btn-lg">Tornados</button>
-      <button value="Flood" class="type-btns btn btn-lg">Floods</button>
-      <button value="Hurricane" class="type-btns btn btn-lg">Hurricanes</button>
+      <h3>Disasters</h3>
+      <button value="Earthquake" class="type-btns btn btn-lg" id="quake">Earthquakes</button>
+      <button value="Tornado" class="type-btns btn btn-lg" id="tornado">Tornados</button>
+      <button value="Flood" class="type-btns btn btn-lg" id="flood">Floods</button>
+      <button value="Hurricane" class="type-btns btn btn-lg" id="hurricane">Hurricanes</button>
 
     </div>
-    <div class="display-box col-md-8 col-md-offset-1">
+    <div class="display-box col-md-10 col-md-offset-2">
     </div>
-    <div class="new-input-form">
+  </main>
+    <div class="new-input-form col-md-10 col-md-offset-1">
+      <h4 class="col-md-3">Add New Disaster Form</h4>
       <form action="api/disasters" method="POST">
         <div class="disaster-form col-md-3">
           <label>Disaster:</label>
@@ -74,12 +84,11 @@
           <input class="form-control" type="number" name="dmgCost" min="0" max="1000000000000">
         </div>
         <div class="submit-new-disaster col-md-3">
+        <label></label>
           <input class="form-control" type="submit" value="Add New Disaster">
         </div>
       </form>
     </div>
-
-  </main>
 
 </body>
 </html>

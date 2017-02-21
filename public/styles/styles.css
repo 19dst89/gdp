@@ -1,10 +1,8 @@
 h1 {
-  /*background-color: blue;*/
   text-align: center;
 }
 
 div.cities {
-  /*border: 2px solid blue;*/
   padding: 5px;
   background-color: lightblue;
   border-radius: 20px;
@@ -17,7 +15,6 @@ h3#city-head {
 }
 
 div.disasters {
-  /*border: 2px solid red;*/
   background-color: rgb(153, 0, 0);
   border-radius: 30px;
   padding-bottom: 20px;
@@ -31,21 +28,16 @@ button.type-btns {
 }
 
 div.display-box {
-  /*border: 2px solid green;*/
   padding: 10px;
   margin-top: -280px;
-  /*margin-right: 5px;*/
   height: 100%;
-  /*margin-left: 50px;*/
 }
 
 main.wrapper {
-  /*border: 2px solid yellow;*/
   height: 100%;
 }
 
 div.small-disaster-box {
-  /*border: 2px solid black;*/
   padding: 20px;
   padding-right: 30px;
   height: 200px;
@@ -60,18 +52,21 @@ ul {
 
 .new-input-form {
   margin-top: 20px;
-  /*border: 2px solid red;*/
   padding: 20px;
   border-radius: 30px;
   background-color: rgb(92, 214, 92);
 }
 
+.update-form {
+  background-color: rgb(163, 102, 255);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  color: white;
+}
+
 #showAll {
-  /*border: 2px solid green;*/
   padding: 10px;
-  /*margin-top: 50px;*/
-/*  height: 100px;
-  width: 100px;*/
 }
 
 button#quake {

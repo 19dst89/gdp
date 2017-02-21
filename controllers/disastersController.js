@@ -38,7 +38,7 @@ function show(req, res) {
 
 // REMOVE /api/disasters/:id
 function destroy(req, res) {
-  db.Disaster.findOneAndRemove({id: req.params._id}, function(err, disasterToDelete){
+  db.Disaster.findOneAndRemove({id: req.params.id}, function(err, disasterToDelete){
     if (err) { console.log("get disaster by location error"); }
     res.json(disasterToDelete);
   });

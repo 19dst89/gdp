@@ -288,7 +288,7 @@ var disasterList = [
     type: "Tornado",
     deathToll: 0,
     dmgCost: 0
-  },
+  }
 ];
 
 db.Disaster.remove({}, function(err, disasters){

@@ -91,7 +91,7 @@ $(document).ready(function() {
     }
 
     $("div.display-box").append(`
-      <div class="small-disaster-box col-md-3" style="background-color:${bkColor}">
+      <div id="${disaster._id}" class="small-disaster-box col-md-3" style="background-color:${bkColor}">
         <ul>
           <li class="date-li">
             ${disaster.date}
@@ -118,7 +118,6 @@ $(document).ready(function() {
   $("div.display-box").on("click", ".small-disaster-box", function(event){
       $("div.new-input-form").hide();
       $("div.update-form").show();
-
       var id = $(this).find('.disaster-id-input').val();
 
       var put_data = {
@@ -146,7 +145,7 @@ $(document).ready(function() {
       $("form#change-form").submit(function(event){
         event.preventDefault();
         $(this).attr("action", `/api/disasters/${put_data._id}`);
-
+        $(this).attr("method", "PUT");
         $.ajax({
           method: "PUT",
           url: `/api/disasters/${put_data._id}`,
@@ -155,6 +154,26 @@ $(document).ready(function() {
           error: handleError
         });
       })
+
+      $("form#change-form").on("click", "#del-btn", function(event){
+        event.preventDefault();
+        $("form#change-form").attr("action", `/api/disasters/${put_data._id}`);
+        $("form#change-form").attr("method", "DELETE");
+        // console.log($(this));
+        $.ajax({
+          method: "DELETE",
+          url: `/api/disasters/${put_data._id}`,
+          success: deleteDisaster,
+          error: handleError
+        });
+        console.log(`put data: ${put_data._id}`);
+      })
+
+      function deleteDisaster(disaster){
+        // console.log($(`div#${put_data._id}`));
+        $(`div#${put_data._id}`).remove();
+      }
+
   });
 
   function changeDisaster(disaster){

@@ -9,12 +9,28 @@ function index(req, res) {
 
 // POST /api/disasters
 function create(req, res) {
-  db.Disaster.create(req.body, function(err, newDisaster){
-    if (err){
-      console.log(err)
-    }
-    res.json(newDisaster)
+  var newDisaster = new db.Disaster({
+    date: req.body.date,
+    name: req.body.name,
+    location: req.body.location,
+    type: req.body.type,
+    deathToll: req.body.deathToll,
+    dmgCost: req.body.dmgCost
   });
+
+  newDisaster.save(function(err, disaster){
+    if (err) {
+        return console.log("save error: " + err);
+    }
+    console.log("saved", disaster);
+    res.json(disaster);
+  })
+  // db.Disaster.create(req.body, function(err, newDisaster){
+  //   if (err){
+  //     console.log(err)
+  //   }
+  //   res.json(newDisaster);
+  // });
 }
 
 // GET /api/disasters/:location

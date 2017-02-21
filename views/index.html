@@ -49,7 +49,7 @@
   </main>
     <div class="new-input-form col-md-10 col-md-offset-1">
       <h4 class="col-md-3">Add New Disaster Form</h4>
-      <form action="api/disasters" method="POST">
+      <form id="new-form" action="api/disasters" method="POST">
         <div class="disaster-form col-md-3">
           <label>Disaster:</label>
           <select name="type" class="form-control">
@@ -70,6 +70,10 @@
             <option>Oklahoma City</option>
             <option>Toronto</option>
           </select>
+        </div>
+        <div class="name-form col-md-3">
+          <label>Name of Disaster:</label>
+          <input class="form-control" type="text" name="name" placeholder="1989 SF Earthquake">
         </div>
         <div class="date-form col-md-3">
           <label>Date:</label>

@@ -1,5 +1,5 @@
 # GDP
-Ghosts of Disasters Past
+[Ghosts of Disasters Past](https://stormy-shelf-74797.herokuapp.com/)
 
 This is a web app to document natural disasters in select cities. Users can add, delete and edit disasters.
 
@@ -23,6 +23,8 @@ The natural disasters that can be documented are:
 * Node.js
 * CSS
 * HTML
+
+Come try it out [here](https://stormy-shelf-74797.herokuapp.com/)!
 
 ### Built By:
 [Daniel Thompson](https://github.com/19dst89/)

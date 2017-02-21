@@ -82,53 +82,213 @@ var disasterList = [
     dmgCost: 870000000
   },
   {
-    date: "October 1, 1969",
-    name: "Seattle TEST",
-    location: "Seattle",
-    type: "Earthquake",
-    deathToll: 1,
-    dmgCost: 870000000
+    date: "March 1, 1938",
+    name: "Los Angeles Flood of 1938",
+    location: "Los Angeles",
+    type: "Flood",
+    deathToll: 115,
+    dmgCost: 400000000
   },
   {
-    date: "October 1, 1969",
-    name: "New York Test",
-    location: "New York",
-    type: "Earthquake",
-    deathToll: 1,
-    dmgCost: 870000000
+    date: "October 3, 1962",
+    name: "California Flood in 1962",
+    location: "San Francisco",
+    type: "Flood",
+    deathToll: 0,
+    dmgCost: 4000000
   },
   {
-    date: "Test DAte",
-    name: "New York Test",
+    date: "February 24, 1986",
+    name: "Northern California Floods of February 1986",
+    location: "San Francisco",
+    type: "Flood",
+    deathToll: 13,
+    dmgCost: 400000000
+  },
+  {
+    date: "January 10, 2005",
+    name: "Los Angeles County Flood of 2005",
+    location: "Los Angeles",
+    type: "Flood",
+    deathToll: 3,
+    dmgCost: 400000000
+  },
+  {
+    date: "August 13, 2014",
+    name: "2014 New York Flood",
     location: "New York",
     type: "Flood",
-    deathToll: 1,
-    dmgCost: 2
+    deathToll: 0,
+    dmgCost: 35000000
   },
   {
-    date: "Test DAte2",
-    name: "New York Test2",
-    location: "New York",
+    date: "May 24, 2015",
+    name: "2015 Oklahoma Flood",
+    location: "Oklahoma City",
     type: "Flood",
-    deathToll: 2,
-    dmgCost: 3
+    deathToll: 58,
+    dmgCost: 0
   },
   {
-    date: "Test DAte2",
-    name: "New York Test2",
-    location: "New York",
+    date: "May 24, 2015",
+    name: "2015 Oklahoma Tornadoes",
+    location: "Oklahoma City",
     type: "Tornado",
-    deathToll: 2,
-    dmgCost: 3
+    deathToll: 58,
+    dmgCost: 0
   },
   {
-    date: "Test DAte2",
-    name: "New York Test2",
+    date: "October 19, 1983",
+    name: "Hurricane Tico",
+    location: "Oklahoma City",
+    type: "Hurricane",
+    deathToll: 0,
+    dmgCost: 84000000
+  },
+  {
+    date: "October 2, 1986",
+    name: "Hurricane Paine",
+    location: "Oklahoma City",
+    type: "Hurricane",
+    deathToll: 6,
+    dmgCost: 350000000
+  },
+  {
+    date: "September 23, 1938",
+    name: "1938 New England Hurricane",
+    location: "New York",
+    type: "Hurricane",
+    deathToll: 682,
+    dmgCost: 306000000
+  },
+  {
+    date: "November 2, 2012",
+    name: "Hurricane Sandy",
+    location: "New York",
+    type: "Hurricane",
+    deathToll: 233,
+    dmgCost: 75000000000
+  },
+  {
+    date: "October 12, 1894",
+    name: "Hurricane Five of 1894 Atlantic Hurricanes",
+    location: "New York",
+    type: "Hurricane",
+    deathToll: 10,
+    dmgCost: 1000000
+  },
+  {
+    date: "August 21, 2011",
+    name: "Hurricane Irene",
+    location: "New York",
+    type: "Hurricane",
+    deathToll: 10,
+    dmgCost: 296000000
+  },
+  {
+    date: "September 19, 1999",
+    name: "Hurricane Floyd",
     location: "New York",
     type: "Hurricane",
     deathToll: 2,
-    dmgCost: 3
-  }
+    dmgCost: 16000000
+  },
+  {
+    date: "October 10, 2016",
+    name: "Hurricane Matthew",
+    location: "Miami",
+    type: "Hurricane",
+    deathToll: 12,
+    dmgCost: 0
+  },
+  {
+    date: "October 27, 2005",
+    name: "Hurricane Wilma",
+    location: "Miami",
+    type: "Hurricane",
+    deathToll: 61,
+    dmgCost: 20600000000
+  },
+  {
+    date: "August 25, 2005",
+    name: "Hurricane Katrina",
+    location: "Miami",
+    type: "Hurricane",
+    deathToll: 14,
+    dmgCost: 623000000
+  },
+  {
+    date: "April 5, 1925",
+    name: "1925 Miami Tornado",
+    location: "Miami",
+    type: "Tornado",
+    deathToll: 5,
+    dmgCost: 300000
+  },
+  {
+    date: "February 28, 2001",
+    name: "2001 Nisqually Earthquake",
+    location: "Seattle",
+    type: "Earthquake",
+    deathToll: 1,
+    dmgCost: 4000000000
+  },
+  {
+    date: "April 29, 1965",
+    name: "1965 Puget Sound Earthquake",
+    location: "Seattle",
+    type: "Earthquake",
+    deathToll: 7,
+    dmgCost: 12500000
+  },
+  {
+    date: "April 13, 1949",
+    name: "1949 Olympia Earthquake",
+    location: "Seattle",
+    type: "Earthquake",
+    deathToll: 8,
+    dmgCost: 25000000
+  },
+  {
+    date: "December 12, 1969",
+    name: "Kent Tornado",
+    location: "Seattle",
+    type: "Tornado",
+    deathToll: 0,
+    dmgCost: 0
+  },
+  {
+    date: "October 18, 1954",
+    name: "Hurricane Hazel",
+    location: "Toronto",
+    type: "Hurricane",
+    deathToll: 81,
+    dmgCost: 125100000
+  },
+  {
+    date: "July 8, 2013",
+    name: "2013 Southern Ontario Flash Flood",
+    location: "Toronto",
+    type: "Flood",
+    deathToll: 0,
+    dmgCost: 0
+  },
+  {
+    date: "May 2, 1983",
+    name: "1983 Southern Ontario Tornadoes",
+    location: "Toronto",
+    type: "Tornado",
+    deathToll: 0,
+    dmgCost: 1200000
+  },
+  {
+    date: "August 14, 1984",
+    name: "1984 Toronto Tornado",
+    location: "Toronto",
+    type: "Tornado",
+    deathToll: 0,
+    dmgCost: 0
+  },
 ];
 
 db.Disaster.remove({}, function(err, disasters){

@@ -50,7 +50,7 @@ function destroy(req, res) {
   });
 }
 
-// GET /api/disasters/:name
+// GET /api/disasters/:id
 function showByName(req, res) {
   db.Disaster.findOne({name: req.params.name}, function(err, foundDisaster){
     if (err) { console.log("get disaster by name error"); }
@@ -60,8 +60,9 @@ function showByName(req, res) {
 
 // UPDATE /api/disasters/:name
 function update(req, res) {
-  db.Disaster.findOne({name: req.params.name}, function(err, foundDisaster) {
+  db.Disaster.findById(req.params._id, function(err, foundDisaster) {
     if(err) { console.log('disastersController.update error', err); }
+    console.log(foundDisaster);
     foundDisaster.date = req.body.date;
     foundDisaster.name = req.body.name;
     foundDisaster.location = req.body.location;

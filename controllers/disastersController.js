@@ -70,8 +70,8 @@ function update(req, res) {
 }
 
 // Find disasters by location and type
-function showByTypeAndLocation(req, res){
-  db.Disaster.find({location: req.params.location, type: req.params.type}, function(err, disasters){
+function showByType(req, res){
+  db.Disaster.find({type: req.params.type}, function(err, disasters){
     if (err) { console.log("get disaster by type error"); }
     res.json(disasters);
   });
@@ -85,7 +85,7 @@ module.exports = {
   destroy: destroy,
   update: update,
   showByName: showByName,
-  showByTypeAndLocation: showByTypeAndLocation
+  showByType: showByType
 };
 
 

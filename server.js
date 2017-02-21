@@ -22,7 +22,7 @@ app.get('/', function homepage (req, res){
 app.get('/api/disasters', controllers.disasters.index);
 app.post('/api/disasters', controllers.disasters.create);
 app.get('/api/disasters/:location', controllers.disasters.show);
-app.get('/api/disasters/:location/:type', controllers.disasters.showByTypeAndLocation);
+app.get('/api/disasters/byType/:type', controllers.disasters.showByType);
 app.delete('/api/disasters/:id', controllers.disasters.destroy);
 app.put('/api/disasters/:id', controllers.disasters.update);
 app.get('/api/disasters/:name', controllers.disasters.showByName);

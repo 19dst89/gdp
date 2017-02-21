@@ -39,11 +39,11 @@ $(document).ready(function() {
   // Show disasters by type and location
   $(".type-btns").click(function(event){
     var type = event.target.value;
-    var location = "New York";
+    // var location = "New York";
 
     $.ajax({
     method: "GET",
-    url: `/api/disasters/${location}/${type}`,
+    url: `/api/disasters/byType/${type}`,
     success: showByType,
     error: handleError
     })
@@ -166,7 +166,7 @@ $(document).ready(function() {
           success: deleteDisaster,
           error: handleError
         });
-        console.log(`put data: ${put_data._id}`);
+        // console.log(`put data: ${put_data._id}`);
       })
 
       function deleteDisaster(disaster){
@@ -174,11 +174,12 @@ $(document).ready(function() {
         $(`div#${put_data._id}`).remove();
       }
 
+    function changeDisaster(disaster){
+      $(`div#${put_data._id}`).remove();
+      renderDisaster(disaster);
+    };
   });
 
-  function changeDisaster(disaster){
-    renderDisaster(disaster);
-  };
 
 
 }) // end document ready
